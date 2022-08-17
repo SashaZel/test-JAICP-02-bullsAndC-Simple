@@ -65,7 +65,7 @@ theme: /
             if (result === 'бык бык бык бык') {
                 $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                 $reactions.answer('Напиши число, если хочешь еще раз сыграть.');
-                $reactions.transition("/Start/Agree?/AgreeYes");
+                $reactions.transition("/Start");
             }
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
