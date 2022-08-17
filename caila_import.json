@@ -44,20 +44,6 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11868333,
-    "path" : "/Согласен",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "да"
-    }, {
-      "text" : "Согласен"
-    }, {
-      "text" : "Давай"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
     "id" : 11868334,
     "path" : "/Не_согласен",
     "enabled" : true,
@@ -72,6 +58,26 @@
       "text" : "найн"
     } ],
     "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11868333,
+    "path" : "/Согласен",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "да"
+    }, {
+      "text" : "Согласен"
+    }, {
+      "text" : "Давай"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "UserGuess",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
     "priority" : 0
   } ],
   "entities" : [ ],

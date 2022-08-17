@@ -15,12 +15,15 @@ theme: /
                 script:
                     // random nubmer with $jsapi.random() is not safe
                     // we can get '13' instead '0013' and our script will crush
-                    //$session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
+                    // ES6 solution dosen't works...
+                    // even Babel tried to use polyfills for ES5 solution
+                    // $session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
                     $session.secretNumber = [0, 0, 0, 0];
                     for (var i = 0; i < 4 ; i++) {
                         $session.secretNumber[i] = Math.floor(Math.random() * 10);    
                     }
-                a: Ты согласен. Я  загадал число {{ $session.secretNumber }}.
+                a: Секрет!!! {{ $session.secretNumber }}.
+                go!: /Game
                 
             state: AgreeNo
                 intent: /Не_согласен
@@ -38,7 +41,9 @@ theme: /
                 event!: noMatch
                 a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
         
-    state: Game    
+    state: Game
+        a: Ты написал {{ $parseTree._UserGuess }}
+            
 
     state: Hello
         intent!: /привет
