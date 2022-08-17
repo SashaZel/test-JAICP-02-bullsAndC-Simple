@@ -4,6 +4,7 @@ scriptsPreLoad:
   global:
     - /src/check.js
   local:
+    - /src/anotherOne.js
 
 entryPoint: main.sc
 
