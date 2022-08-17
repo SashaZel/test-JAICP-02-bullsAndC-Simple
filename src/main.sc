@@ -17,6 +17,10 @@ theme: /
             state: AgreeNo
                 intent: /Не_согласен
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
+                
+            state: NoMatch
+                event!: noMatch
+                a: Я не понял. Вы сказали: {{$request.query}}
         
         
 
@@ -28,9 +32,7 @@ theme: /
         intent!: /пока
         a: Пока пока
 
-    state: NoMatch
-        event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
+    
 
     state: Match
         event!: match
