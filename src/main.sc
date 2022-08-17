@@ -1,5 +1,7 @@
 require: scripts/check.js
 require: scripts/numberGenerator.js
+require: common.js
+  module = sys.zb-common
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
 theme: /
@@ -58,7 +60,7 @@ theme: /
             var result = checkNumber($parseTree._UserGuess);
             $reactions.answer(result);
             if (result === '   ') {
-                $reactions.answer('Что-то совсем пусто. Ничего не угадал');
+                $reactions.answer(selectRandomArg(['Что-то совсем пусто. Ничего не угадал', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
             }
             if (result === 'бык бык бык бык') {
                 $reactions.answer('Победа! Поздравляю.');
