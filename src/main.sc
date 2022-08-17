@@ -61,7 +61,9 @@ theme: /
         intent!: /пока
         a: Пока пока
 
-    
+    state: NoMatch
+        event!: noMatch
+        a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
 
     state: Match
         event!: match
