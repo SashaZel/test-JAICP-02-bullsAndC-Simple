@@ -2,9 +2,9 @@ name: zb-cailapub
 
 scriptsPreLoad:
   global:
-    - /src/check.js
+    - /check.js
   local:
-    - /src/anotherOne.js
+    - /anotherOne.js
 
 entryPoint: main.sc
 
