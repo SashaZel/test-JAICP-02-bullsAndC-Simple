@@ -22,7 +22,7 @@ theme: /
                     for (var i = 0; i < 4 ; i++) {
                         $session.secretNumber[i] = Math.floor(Math.random() * 10);    
                     }
-                a: Секрет!!! {{ $session.secretNumber }}.
+                a: _test Секрет!!! {{ $session.secretNumber }}.
                 go!: /Game
                 
             state: AgreeNo
@@ -42,7 +42,7 @@ theme: /
                 a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
         
     state: Game
-        a: Ты написал {{ $parseTree._UserGuess }}
+        a: _test Ты написал {{ $parseTree._UserGuess }}
             
 
     state: Hello
