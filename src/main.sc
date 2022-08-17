@@ -53,7 +53,7 @@ theme: /
         script: 
             //$reactions.answer('User wrote {{ $parseTree._UserGuess }}');
     
-            checkNumber($parseTree._UserGuess);
+            $reactions.answer(checkNumber($parseTree._UserGuess));
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
             //}

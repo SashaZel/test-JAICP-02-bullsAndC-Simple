@@ -5,8 +5,10 @@ function checkNumber(userGuess) {
             
             
     if (userGuess == $jsapi.context().session.secretNumber) {
-        $jsapi.context().reactions.answer('Угадал!');
+        return 'Угадал!';
+    //    $jsapi.context().reactions.answer('Угадал!');
     } else {
-        $jsapi.context().reactions.answer('НЕ угадал!');
+        return 'Не угадал.';
+    //    $jsapi.context().reactions.answer('НЕ угадал!');
     }
 }
