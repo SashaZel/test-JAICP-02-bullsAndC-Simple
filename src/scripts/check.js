@@ -1,5 +1,5 @@
-function checkNumber() {
-    var userGuess = $parseTree._UserGuess;
+function checkNumber(userGuess) {
+    //var userGuess = $parseTree._UserGuess;
             
     //$reactions.answer(checkNumber('a'));
             
