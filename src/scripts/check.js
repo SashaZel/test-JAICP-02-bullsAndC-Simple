@@ -10,7 +10,10 @@ function checkNumber(userGuess) {
             if (element === $jsapi.context().session.secretNumber[index]) {
                 return 'бык';
             }
-            return element + 'Hi';
+            if ($jsapi.context().session.secretNumber.indexOf(element) >= 0) {
+                return 'корова';
+            }
+            return '';
         }
     ).join(' ');
     
