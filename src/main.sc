@@ -48,11 +48,17 @@ theme: /
         
         
     state: Check
+        intent: /Число
         script: 
             $reactions.answer('User wrote {{ $parseTree._UserGuess }}');
     
             var userGuess = $parseTree._UserGuess;
             
+            if (userGuess == $session.secretNumber) {
+                $reactions.answer('Угадал!');
+            } else {
+                $reactions.answer('НЕ угадал!');
+            }
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
             //}

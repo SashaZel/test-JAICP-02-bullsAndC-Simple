@@ -79,6 +79,22 @@
       "prompts" : [ "Напиши догадку" ]
     } ],
     "priority" : 0
+  }, {
+    "id" : 11870894,
+    "path" : "/Число",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "@duckling.number"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "UserGuess",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
+    "priority" : 0
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
