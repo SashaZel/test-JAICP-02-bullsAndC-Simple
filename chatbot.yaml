@@ -1,11 +1,5 @@
 name: zb-cailapub
 
-scriptsPreLoad:
-  global:
-    - /check.js
-  local:
-    - /anotherOne.js
-
 entryPoint: main.sc
 
 botEngine: v2
