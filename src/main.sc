@@ -52,8 +52,16 @@ theme: /
         intent: /Число
         script: 
             //$reactions.answer('User wrote {{ $parseTree._UserGuess }}');
-    
-            $reactions.answer(checkNumber($parseTree._UserGuess));
+            // call imported function for checking result from src/scripts/check.js <string>
+            var result = checkNumber($parseTree._UserGuess);
+            $reactions.answer(result);
+            if (result === '    ') {
+                $reactions.answer('Что-то совсем пусто. Ничего не угадал');
+            }
+            if (result === 'бык бык бык бык') {
+                $reactions.answer('Победа!');
+                $reactions.transition("/Start/Agree?");
+            }
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
             //}
