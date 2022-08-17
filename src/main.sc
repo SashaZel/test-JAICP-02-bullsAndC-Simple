@@ -53,16 +53,7 @@ theme: /
         script: 
             //$reactions.answer('User wrote {{ $parseTree._UserGuess }}');
     
-            var userGuess = String($parseTree._UserGuess);
-            
-            $reactions.answer(checkNumber('a'));
-            
-            
-            if (userGuess == $session.secretNumber) {
-                $reactions.answer('Угадал!');
-            } else {
-                $reactions.answer('НЕ угадал!');
-            }
+            checkNumber();
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
             //}
