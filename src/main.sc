@@ -43,7 +43,7 @@ theme: /
                 
     state: NumberQuery
         intent: /Запрос_числа
-        go!: /Game
+        go: /Game
         
     state: Game
         
