@@ -43,7 +43,7 @@ theme: /
             //for (var i = 0; i < 4 ; i++) {
             //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
             //}
-            $session.secretNumber = 1234;
+            $session.secretNumber = ['1', '2', '3', '4'];
             $reactions.answer('The secret number is {{ $session.secretNumber }}');  
             $reactions.transition("/Check");
         
