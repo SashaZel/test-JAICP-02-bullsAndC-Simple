@@ -18,6 +18,10 @@ theme: /
                 
             state: AgreeNo
                 intent: /Не_согласен
+                script:
+                    // is the js comment works here?
+                    // we clean up secretNumber without null cause I am not sure in this env and afraid error crush
+                    $session.secretNumber = 0000;
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
             # Why does the bot state bubbles to global scope if no match?
