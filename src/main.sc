@@ -4,7 +4,21 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём.
+        intent!: /Сыграем
+        a: Приветствую! Сыграем в "Быки и коровы"? Я загадаю 4-х значное число, а ты попробуешь его угадать. Начнем?
+        go!: Start/Agree
+        
+        state: Agree
+            
+            state: AgreeYes
+                intent: /Согласен
+                a: Ты согласен.
+                
+            state: AgreeNo
+                intent: /Не_согласен
+                a: Ну ОК. Как будешь готов - напиши "сыграем".
+        
+        
 
     state: Hello
         intent!: /привет
