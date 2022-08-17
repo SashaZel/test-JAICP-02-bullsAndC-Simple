@@ -50,9 +50,10 @@ theme: /
     state: Check
         intent: /Число
         script: 
-            $reactions.answer('User wrote {{ $parseTree._UserGuess }}');
+            //$reactions.answer('User wrote {{ $parseTree._UserGuess }}');
     
-            var userGuess = $parseTree._UserGuess;
+            var userGuess = String($parseTree._UserGuess);
+            
             
             if (userGuess == $session.secretNumber) {
                 $reactions.answer('Угадал!');
