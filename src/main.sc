@@ -22,7 +22,7 @@ theme: /
                     for (var i = 0; i < 4 ; i++) {
                         $session.secretNumber[i] = Math.floor(Math.random() * 10);    
                     }
-                    $reaction.answer('The secret number is {{ $session.secretNumber }}');
+                    $reactions.answer('The secret number is {{ $session.secretNumber }}');
                 a: _test Секрет!!! {{ $session.secretNumber }}.
                 go!: /Game
                 
