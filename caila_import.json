@@ -76,7 +76,7 @@
       "name" : "UserGuess",
       "entity" : "duckling.number",
       "required" : true,
-      "prompts" : [ ]
+      "prompts" : [ "Я загадал число. Угадай." ]
     } ],
     "priority" : 0
   } ],
