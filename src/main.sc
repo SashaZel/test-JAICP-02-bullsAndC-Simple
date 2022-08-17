@@ -60,7 +60,7 @@ theme: /
             }
             if (result === 'бык бык бык бык') {
                 $reactions.answer('Победа!');
-                $reactions.transition("/Start/Agree?");
+                $reactions.transition("Start/Agree?");
             }
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
