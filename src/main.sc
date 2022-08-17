@@ -23,8 +23,7 @@ theme: /
                         $session.secretNumber[i] = Math.floor(Math.random() * 10);    
                     }
                     $reactions.answer('The secret number is {{ $session.secretNumber }}');
-                a: _test Секрет!!! {{ $session.secretNumber }}.
-                go!: /Game
+                go!: /NumberQuery
                 
             state: AgreeNo
                 intent: /Не_согласен
@@ -41,10 +40,21 @@ theme: /
             state: NoMatch
                 event!: noMatch
                 a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
+                
+    state: NumberQuery
+        intent: /Запрос_числа
+        go!: /Game
         
     state: Game
+        
         script: 
-        a: _test Ты написал {{ $parseTree._UserGuess }}
+            $reactions.answer('User wrote {{ $parseTree._UserGuess }}');
+            
+            var userGuess = $parseTree._UserGuess;
+            
+            if (!Number.isInteger(Number(userGuess))) {
+                $reactions.answer('Это не число. Пиши цифры.');
+            }
             
 
     state: Hello

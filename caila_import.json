@@ -72,8 +72,17 @@
       "text" : "Давай"
     } ],
     "patterns" : [ ],
+    "slots" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11869538,
+    "path" : "/Запрос_числа",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "patterns" : [ ],
     "slots" : [ {
-      "name" : "UserGuess",
+      "name" : "User_Guess",
       "entity" : "duckling.number",
       "required" : true,
       "prompts" : [ "Я загадал число. Угадай." ]
