@@ -22,6 +22,7 @@ theme: /
                     for (var i = 0; i < 4 ; i++) {
                         $session.secretNumber[i] = Math.floor(Math.random() * 10);    
                     }
+                    $reaction.answer('The secret number is {{ $session.secretNumber }}');
                 a: _test Секрет!!! {{ $session.secretNumber }}.
                 go!: /Game
                 
@@ -42,6 +43,7 @@ theme: /
                 a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
         
     state: Game
+        script: 
         a: _test Ты написал {{ $parseTree._UserGuess }}
             
 
