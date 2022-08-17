@@ -46,7 +46,6 @@ theme: /
         
         
     state: Check
-        
         script: 
             $reactions.answer('User wrote {{ $parseTree._UserGuess }}');
             
