@@ -37,9 +37,9 @@ theme: /
             # How can I catch wrong answer in scope of "Agree?" state
             # and handle it with "Agree?/NoMatch" case?
                 
-            state: NoMatch
-                event!: noMatch
-                a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
+            #state: NoMatch
+            #    event!: noMatch
+            #    a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
         
     state: Game
         
