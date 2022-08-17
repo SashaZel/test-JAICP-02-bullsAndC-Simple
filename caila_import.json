@@ -76,7 +76,7 @@
       "name" : "User_Guess",
       "entity" : "duckling.number",
       "required" : true,
-      "prompts" : [ ]
+      "prompts" : [ "Напиши догадку" ]
     } ],
     "priority" : 0
   } ],

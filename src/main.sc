@@ -12,7 +12,6 @@ theme: /
             
             state: AgreeYes
                 intent: /Согласен
-                
                 go!: /Game
                 
             state: AgreeNo
