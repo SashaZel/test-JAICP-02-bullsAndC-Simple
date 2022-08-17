@@ -13,7 +13,9 @@ theme: /
             state: AgreeYes
                 intent: /Согласен
                 script:
-                    $session.secretNumber = $jsapi.random(10000);
+                    // random nubmer with $jsapi.random() is not safe
+                    // we can get '13' instead '0013' and our script will crush
+                    $session.secretNumber = [].concat(String(Math.trunc(Math.random() * 10000)).padStart(4, '0'));
                 a: Ты согласен. Я  загадал число {{ $session.secretNumber }}.
                 
             state: AgreeNo
