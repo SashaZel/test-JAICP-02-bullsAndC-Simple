@@ -38,10 +38,10 @@ theme: /
             // even Babel tried to use polyfills for ES5 solution
             // $session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
             
-            $session.secretNumber = [0, 0, 0, 0];
-            for (var i = 0; i < 4 ; i++) {
-                $session.secretNumber[i] = Math.floor(Math.random() * 10);    
-            }
+            //$session.secretNumber = [0, 0, 0, 0];
+            //for (var i = 0; i < 4 ; i++) {
+            //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
+            //}
             $session.secretNumber = '1234';
             $reactions.answer('The secret number is {{ $session.secretNumber }}');  
             $reactions.transition("/Check");
