@@ -12,17 +12,7 @@ theme: /
             
             state: AgreeYes
                 intent: /Согласен
-                script:
-                    // random nubmer with $jsapi.random() is not safe
-                    // we can get '13' instead '0013' and our script will crush
-                    // ES6 solution dosen't works...
-                    // even Babel tried to use polyfills for ES5 solution
-                    // $session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
-                    $session.secretNumber = [0, 0, 0, 0];
-                    for (var i = 0; i < 4 ; i++) {
-                        $session.secretNumber[i] = Math.floor(Math.random() * 10);    
-                    }
-                    $reactions.answer('The secret number is {{ $session.secretNumber }}');
+                
                 go!: /Game
                 
             state: AgreeNo
@@ -40,8 +30,23 @@ theme: /
             #state: NoMatch
             #    event!: noMatch
             #    a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
-        
+            
     state: Game
+        script:
+            // random nubmer with $jsapi.random() is not safe
+            // we can get '13' instead '0013' and our script will crush
+            // ES6 solution dosen't works...
+            // even Babel tried to use polyfills for ES5 solution
+            // $session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
+            $session.secretNumber = [0, 0, 0, 0];
+            for (var i = 0; i < 4 ; i++) {
+                $session.secretNumber[i] = Math.floor(Math.random() * 10);    
+            }
+            $reactions.answer('The secret number is {{ $session.secretNumber }}');  
+            $reactions.transition("/Check");
+        
+        
+    state: Check
         
         script: 
             $reactions.answer('User wrote {{ $parseTree._UserGuess }}');
