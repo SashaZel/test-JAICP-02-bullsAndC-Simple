@@ -52,9 +52,9 @@ theme: /
             
             var userGuess = $parseTree._UserGuess;
             
-            if (!Number.isInteger(Number(userGuess))) {
-                $reactions.answer('Это не число. Пиши цифры.');
-            }
+            //if (!Number.isInteger(Number(userGuess))) {
+            //    $reactions.answer('Это не число. Пиши цифры.');
+            //}
             
 
     state: Hello
