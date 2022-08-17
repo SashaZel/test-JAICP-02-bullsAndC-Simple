@@ -13,7 +13,7 @@ theme: /
             state: AgreeYes
                 intent: /Согласен
                 script:
-                    $session.secretNumber = $jsapi.random(10000);
+                    $session.secretNumber = [ 1, 2, 3, 4 ];
                 a: Ты согласен. Я  загадал число {{ $session.secretNumber }}.
                 
             state: AgreeNo
