@@ -4,9 +4,9 @@ function checkNumber(userGuess) {
     //$reactions.answer(checkNumber('a'));
             
             
-    if (userGuess == $session.secretNumber) {
-        $reactions.answer('Угадал!');
+    if (userGuess == $jsapi.context().session.secretNumber) {
+        $jsapi.context().reactions.answer('Угадал!');
     } else {
-        $reactions.answer('НЕ угадал!');
+        $jsapi.context().reactions.answer('НЕ угадал!');
     }
 }
