@@ -1,4 +1,5 @@
 require: scripts/check.js
+require: scripts/numberGenerator.js
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
 theme: /
@@ -43,8 +44,9 @@ theme: /
             //for (var i = 0; i < 4 ; i++) {
             //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
             //}
-            $session.secretNumber = ['1', '2', '3', '4'];
-            //$reactions.answer('The secret number is {{ $session.secretNumber }}');  
+            //$session.secretNumber = ['1', '2', '3', '4'];
+            //$reactions.answer('The secret number is {{ $session.secretNumber }}');
+            createNewSecretNumber();
             $reactions.transition("/Check");
         
         
@@ -59,8 +61,9 @@ theme: /
                 $reactions.answer('Что-то совсем пусто. Ничего не угадал');
             }
             if (result === 'бык бык бык бык') {
-                $reactions.answer('Победа!');
-                $reactions.transition("/Start");
+                $reactions.answer('Победа! Поздравляю.');
+                $reactions.answer('Напиши число, если хочешь еще раз сыграть.');
+                $reactions.transition("/Start/Agree/AgreeYes");
             }
             //if (!Number.isInteger(Number(userGuess))) {
             //    $reactions.answer('Это не число. Пиши цифры.');
