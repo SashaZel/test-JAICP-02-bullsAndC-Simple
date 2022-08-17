@@ -6,7 +6,7 @@ theme: /
         q!: $regex</start>
         intent!: /Сыграем
         a: Приветствую! Сыграем в "Быки и коровы"? Я загадаю 4-х значное число, а ты попробуешь его угадать. Начнем?
-        go!: Start/Agree
+        go!: /Start/Agree
         
         state: Agree
             
