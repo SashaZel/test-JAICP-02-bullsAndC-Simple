@@ -63,7 +63,7 @@ theme: /
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Ничего не угадал', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
             }
             if (result === 'бык бык бык бык') {
-                $reactions.answer('Победа! Поздравляю.');
+                $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                 $reactions.answer('Напиши число, если хочешь еще раз сыграть.');
                 $reactions.transition("/Start/Agree/AgreeYes");
             }

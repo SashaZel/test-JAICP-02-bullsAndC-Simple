@@ -3,7 +3,8 @@ function checkNumber(userGuess) {
     if (String(userGuess).length !== 4) {
         return 'Нужно написать четыре цифры';
     }         
-    //$reactions.answer(checkNumber('a'));
+    // Increment number of attempts
+    $jsapi.context().session.numberOfAttempts += 1;
     var arrForFormatting = String(userGuess).split('');
     return arrForFormatting.map(
         function(element, index) {
