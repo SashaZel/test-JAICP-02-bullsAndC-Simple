@@ -15,7 +15,8 @@ theme: /
                 script:
                     // random nubmer with $jsapi.random() is not safe
                     // we can get '13' instead '0013' and our script will crush
-                    $session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
+                    //$session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
+                    $session.secretNumber = new Array(4).fill('0');
                 a: Ты согласен. Я  загадал число {{ $session.secretNumber }}.
                 
             state: AgreeNo
