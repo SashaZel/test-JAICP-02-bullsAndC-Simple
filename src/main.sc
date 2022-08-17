@@ -12,17 +12,23 @@ theme: /
             
             state: AgreeYes
                 intent: /Согласен
-                a: Ты согласен.
+                script:
+                    $session.secretNumber = $jsapi.random(10000);
+                a: Ты согласен. Я  загадал число {{ $session.secretNumber }}.
                 
             state: AgreeNo
                 intent: /Не_согласен
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
+            # Why does the bot state bubbles to global scope if no match?
+            # How can I catch wrong answer in scope of "Agree?" state
+            # and handle it with "Agree?/NoMatch" case?
+                
             state: NoMatch
                 event!: noMatch
-                a: Я не понял. Вы сказали: {{$request.query}}
+                a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
         
-        
+    state: Game    
 
     state: Hello
         intent!: /привет
