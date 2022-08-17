@@ -23,7 +23,7 @@ theme: /
                         $session.secretNumber[i] = Math.floor(Math.random() * 10);    
                     }
                     $reactions.answer('The secret number is {{ $session.secretNumber }}');
-                go!: /NumberQuery
+                go!: /Game
                 
             state: AgreeNo
                 intent: /Не_согласен
@@ -40,10 +40,6 @@ theme: /
             state: NoMatch
                 event!: noMatch
                 a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
-                
-    state: NumberQuery
-        intent: /Запрос_числа
-        go: /Game
         
     state: Game
         
