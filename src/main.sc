@@ -55,6 +55,8 @@ theme: /
     
             var userGuess = String($parseTree._UserGuess);
             
+            $reactions.answer(checkNumber('a'));
+            
             
             if (userGuess == $session.secretNumber) {
                 $reactions.answer('Угадал!');
