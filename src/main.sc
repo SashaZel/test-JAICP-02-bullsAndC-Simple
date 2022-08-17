@@ -17,6 +17,9 @@ theme: /
                     // we can get '13' instead '0013' and our script will crush
                     //$session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
                     $session.secretNumber = [0, 0, 0, 0];
+                    for (var i = 0; i < 4 ; i++) {
+                        $session.secretNumber[i] = Math.floor(Math.random() * 10);    
+                    }
                 a: Ты согласен. Я  загадал число {{ $session.secretNumber }}.
                 
             state: AgreeNo
@@ -24,7 +27,7 @@ theme: /
                 script:
                     // is the js comment works here?
                     // we clean up secretNumber without null cause I am not sure in this env and afraid error crush
-                    $session.secretNumber = 0;
+                    $session.secretNumber = [0, 0, 0, 0];
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
             # Why does the bot state bubbles to global scope if no match?
