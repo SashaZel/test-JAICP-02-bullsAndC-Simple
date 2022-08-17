@@ -73,7 +73,7 @@
     } ],
     "patterns" : [ ],
     "slots" : [ {
-      "name" : "User_Guess",
+      "name" : "UserGuess",
       "entity" : "duckling.number",
       "required" : true,
       "prompts" : [ "Напиши догадку" ]
