@@ -52,7 +52,6 @@ theme: /
             // Set number of attempts to '0'
             // This feature make for better UX and gameplay
             //console.log('Hello console');
-            $global.console.log('Hello console');
             // console do not accesseble...
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
