@@ -55,7 +55,7 @@ theme: /
             // console do not accesseble...
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
-            $reactions.answer("_Secret number {{$session.secretNumber}}");
+            
             //$reactions.transition("/Check");
         go!: /Check
         
@@ -63,7 +63,7 @@ theme: /
     state: Check
         intent: /Число
         script: 
-            //$reactions.answer('User wrote {{ $parseTree._UserGuess }}');
+            $reactions.answer("_Secret number {{$session.secretNumber}}");
             // call imported function for checking result from src/scripts/check.js <string>
             var result = checkNumber($parseTree._UserGuess);
             $reactions.answer(result);
