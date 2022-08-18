@@ -80,10 +80,6 @@ theme: /
                 $jsapi.stopSession();
                 $reactions.transition("/Start/Agree?");
             }
-            //if (!Number.isInteger(Number(userGuess))) {
-            //    $reactions.answer('Это не число. Пиши цифры.');
-            //}
-            
 
     state: Rules
         intent!: /Правила

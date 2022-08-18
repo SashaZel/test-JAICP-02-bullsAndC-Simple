@@ -119,12 +119,7 @@
       "text" : "@duckling.number"
     } ],
     "patterns" : [ ],
-    "slots" : [ {
-      "name" : "UserGuess",
-      "entity" : "duckling.number",
-      "required" : true,
-      "prompts" : [ "Напиши число в 4 цифры." ]
-    } ],
+    "slots" : [ ],
     "priority" : 0
   }, {
     "id" : 11891274,
