@@ -24,14 +24,6 @@ theme: /
             state: AgreeNo
                 intent: /Не_согласен
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
-                
-            # Why does the bot state bubbles to the global scope if no match?
-            # How can I catch a wrong answer in the scope of "Agree?" state
-            # and handle it with "Agree?/NoMatch" case?
-                
-            #state: NoMatch
-            #    event!: noMatch
-            #    a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
             
             state: GameStart
                 intent: /Начало_игры
@@ -107,7 +99,7 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Я не понимаю. \n Если будем играть, напиши "Да". \n Если нужны подробные правила, напиши "Правила" \n Если хочешь узнать кто я, напиши "Бот"
+        a: Я не понимаю. \n Если хочешь новую игру, напиши "Да". \n Если нужны подробные правила, напиши "Правила" \n Если хочешь узнать кто я, напиши "Бот"
         go: /Start/Agree?
         
     state: Match
