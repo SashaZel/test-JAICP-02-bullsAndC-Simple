@@ -19,7 +19,7 @@ theme: /
             
             state: AgreeYes
                 intent: /Согласен
-                go!: /GameStart
+                go!: ../GameStart
                 
             state: AgreeNo
                 intent: /Не_согласен
