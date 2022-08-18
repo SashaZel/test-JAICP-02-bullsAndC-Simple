@@ -16,16 +16,6 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11868332,
-    "path" : "/Сыграем",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "сыграем"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
     "id" : 11868334,
     "path" : "/Не_согласен",
     "enabled" : true,
@@ -92,6 +82,24 @@
       "text" : "О себе"
     }, {
       "text" : "Кто придумал"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11868332,
+    "path" : "/Сыграем",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "сыграем"
+    }, {
+      "text" : "пуск"
+    }, {
+      "text" : "начало"
+    }, {
+      "text" : "старт"
+    }, {
+      "text" : "start"
     } ],
     "patterns" : [ ],
     "priority" : 0
