@@ -35,4 +35,15 @@
         <q>найн</q>
         <a state="/Start/Agree?/AgreeNo"/>
     </test-case>
+    <test-case id="05_Basic_Game_Tree">
+        <q>/start</q>
+        <a state="/Start"/>
+        <q>да</q>
+        <a state="/Start/Agree?/GameStart"/>
+        <context var="session">
+            {
+                "secretNumber" : ['1', '2', '3', '4'] 
+            }
+        </context>
+    </test-case>
 </test>    
