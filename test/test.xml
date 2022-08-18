@@ -24,5 +24,7 @@
         <a state="/Start/Agree?/GameStart"/>
         <q>1234556</q>
         <a state="/Start/Agree?/GameStart"/>
+        <q>ьььььФФАААуууу</q>
+        <a state="/NoMatch"/>
     </test-case>
 </test>    
