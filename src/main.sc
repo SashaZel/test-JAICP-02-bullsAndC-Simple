@@ -24,7 +24,7 @@ theme: /
                     // is the js comment works here?
                     // we clean up secretNumber without null cause I am not sure in this env and afraid error crush
                     //$session.secretNumber = [0, 0, 0, 0];
-                    $jsapi.stopSession();
+                    //$jsapi.stopSession();
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
             # Why does the bot state bubbles to global scope if no match?
