@@ -21,14 +21,12 @@ theme: /
             state: AgreeNo
                 intent: /Не_согласен
                 script:
-                    // is the js comment works here?
-                    // we clean up secretNumber without null cause I am not sure in this env and afraid error crush
-                    //$session.secretNumber = [0, 0, 0, 0];
+                    // Sould I use gracefull finish of session?
                     //$jsapi.stopSession();
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
-            # Why does the bot state bubbles to global scope if no match?
-            # How can I catch wrong answer in scope of "Agree?" state
+            # Why does the bot state bubbles to the global scope if no match?
+            # How can I catch a wrong answer in the scope of "Agree?" state
             # and handle it with "Agree?/NoMatch" case?
                 
             #state: NoMatch
@@ -63,6 +61,7 @@ theme: /
     state: Check
         intent: /Число
         script: 
+            // TODO: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
             // call imported function for checking result from src/scripts/check.js <string>
             var result = checkNumber($parseTree._UserGuess);
@@ -71,6 +70,7 @@ theme: /
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Ничего не угадал', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
             }
             if (result === 'бык бык бык бык') {
+                // Is it possible to add NLG feature for numbers?
                 $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                 $reactions.answer('Напиши число, если хочешь еще раз сыграть.');
                 $reactions.transition("/Start/Agree?");
@@ -80,16 +80,12 @@ theme: /
             //}
             
 
-    state: Hello
-        intent!: /привет
-        a: Привет привет
-
-    state: Bye
-        intent!: /пока
-        a: Пока пока
+    state: Rules
+        intent!: /Правила
+        a: Вот правила игры: Я загадываю число из четырех цифр, например "1234". А ты его должен угадать, то есть написать мне четыре цифры. Если ты написал цифру правильно по месту и значению, то я отвечу "бык". Если какая-то твоя цифра есть в моем секретном числе, то я отвечу "корова". Например, я загадал "1234", а ты мне написал "1243". Я отвечу "бык, бык, корова, корова". Сыграем?
         
     # Can I use '\n' end of the line?
-    # Is it OK for integration like a telecom bot?
+    # Is it OK for integration like a telecom bots?
 
     state: NoMatch
         event!: noMatch

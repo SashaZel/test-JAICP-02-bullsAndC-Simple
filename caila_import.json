@@ -16,24 +16,6 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11868296,
-    "path" : "/пока",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "пока"
-    } ],
-    "priority" : 0
-  }, {
-    "id" : 11868297,
-    "path" : "/привет",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "привет"
-    } ],
-    "priority" : 0
-  }, {
     "id" : 11868332,
     "path" : "/Сыграем",
     "enabled" : true,
@@ -56,6 +38,34 @@
       "text" : "неа"
     }, {
       "text" : "найн"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11890362,
+    "path" : "/Правила",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "правила"
+    }, {
+      "text" : "условия"
+    }, {
+      "text" : "инструкция"
+    }, {
+      "text" : "мануал"
+    }, {
+      "text" : "руководство"
+    }, {
+      "text" : "man"
+    }, {
+      "text" : "help"
+    }, {
+      "text" : "как играть"
+    }, {
+      "text" : "что писать"
+    }, {
+      "text" : "куда нажимать"
     } ],
     "patterns" : [ ],
     "priority" : 0
