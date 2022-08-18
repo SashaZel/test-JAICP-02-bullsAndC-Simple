@@ -23,7 +23,8 @@ theme: /
                 script:
                     // is the js comment works here?
                     // we clean up secretNumber without null cause I am not sure in this env and afraid error crush
-                    $session.secretNumber = [0, 0, 0, 0];
+                    //$session.secretNumber = [0, 0, 0, 0];
+                    $jsapi.stopSession();
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
             # Why does the bot state bubbles to global scope if no match?
@@ -50,6 +51,7 @@ theme: /
             //$reactions.answer('The secret number is {{ $session.secretNumber }}');
             // Set number of attempts to '0'
             // This feature make for better UX and gameplay
+            console.log('Hello console');
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
             $reactions.transition("/Check");
