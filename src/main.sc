@@ -48,7 +48,10 @@ theme: /
             //}
             //$session.secretNumber = ['1', '2', '3', '4'];
             //$reactions.answer('The secret number is {{ $session.secretNumber }}');
-            createNewSecretNumber();
+            // Set number of attempts to '0'
+            // This feature make for better UX and gameplay
+            $session.numberOfAttempts = 0;
+            $session.secretNumber = createNewSecretNumber();
             $reactions.transition("/Check");
         
         
@@ -82,7 +85,7 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
+        a: Я не понимаю. "Да" или "Нет?" Вы сказали: {{$request.query}}
 
     state: Match
         event!: match
