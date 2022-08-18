@@ -15,6 +15,8 @@ theme: /
         go!: /Start/Agree?
         
         state: Agree?
+            script:
+                $jsapi.startSession();
             
             state: AgreeYes
                 intent: /Согласен
@@ -23,8 +25,7 @@ theme: /
             state: AgreeNo
                 intent: /Не_согласен
                 script:
-                    // Sould I use graceful finish of session?
-                    //$jsapi.stopSession();
+                    
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
             # Why does the bot state bubbles to the global scope if no match?
@@ -75,6 +76,8 @@ theme: /
                 // Is it possible to add NLG feature for numbers?
                 $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                 $reactions.answer('Напиши число, если хочешь еще раз сыграть.');
+                // Sould I use graceful finish of session?
+                $jsapi.stopSession();
                 $reactions.transition("/Start/Agree?");
             }
             //if (!Number.isInteger(Number(userGuess))) {
