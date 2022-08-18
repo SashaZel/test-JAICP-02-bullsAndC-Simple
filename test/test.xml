@@ -47,6 +47,7 @@
         </context>
         <q>1111</q>
         <a state="/Check"/>
-        <a>бык  </a>
+        <q>4444</q>
+        <a>   бык</a>
     </test-case>
 </test>    
