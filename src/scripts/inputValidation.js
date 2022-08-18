@@ -1,10 +1,10 @@
 function inputISvalid(userInput) {
     if (
-        !Number(userInput) || 
-        typeof Number(userInput) !== 'number' || 
-        String(userInput).length !== 4
+        Number(userInput) && 
+        typeof Number(userInput) === 'number' && 
+        String(userInput).length === 4
         ) {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
