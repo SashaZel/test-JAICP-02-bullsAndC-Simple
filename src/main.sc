@@ -56,7 +56,8 @@ theme: /
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
             $reactions.answer([1,2]);
-            $reactions.transition("/Check");
+            //$reactions.transition("/Check");
+        go!: /Check
         
         
     state: Check
