@@ -45,7 +45,9 @@ theme: /
             //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
             //}
             //$session.secretNumber = ['1', '2', '3', '4'];
-            $reactions.answer('var UserGuess {{ $parseTree._UserGuess }}');
+            // CAILA
+            $reactions.answer('_var UserGuess {{ $parseTree._UserGuess }}');
+            $reactions.answer('_User wrote {{ $request.query }}');
             // Set number of attempts to '0'
             // This feature make for better UX and gameplay
             //console.log('Hello console');
