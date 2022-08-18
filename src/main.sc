@@ -34,7 +34,7 @@ theme: /
             #    a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
             
     state: Game
-        intent!: /Начало_игры
+        intent: /Начало_игры
         script:
             // random nubmer with $jsapi.random() is not safe
             // we can get '13' instead '0013' and our script will crush
