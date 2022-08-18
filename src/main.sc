@@ -31,7 +31,7 @@ theme: /
                 intent: /Начало_игры
                 script:
                     // IMPORTANT!: line below is a test feature. Remove in production.
-                    $reactions.answer('_User wrote {{ $request.query }}');
+                    //$reactions.answer('_User wrote {{ $request.query }}');
             
                     // Start session by cleaning $session. obj
                     $jsapi.startSession();
