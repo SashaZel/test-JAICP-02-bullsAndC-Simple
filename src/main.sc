@@ -92,7 +92,7 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Я не понимаю. "Да" или "Нет?" \n Вы сказали: {{$request.query}}
+        a: Я не понимаю. "Да" или "Нет?" Вы сказали: {{$request.query}}
 
     state: Match
         event!: match
