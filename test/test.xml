@@ -45,5 +45,7 @@
                 "secretNumber" : "['1', '2', '3', '4']" 
             }
         </context>
+        <q>1111</q>
+        <a state="/Check"/>
     </test-case>
 </test>    
