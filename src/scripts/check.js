@@ -10,10 +10,10 @@ function checkNumber(userGuess, secretNumber) {
 
     return String(userGuess).split('').map(
         function(element, index) {
-            if (element === $jsapi.context().session.secretNumber[index]) {
+            if (element === secretNumber[index]) {
                 return 'бык';
             }
-            if ($jsapi.context().session.secretNumber.indexOf(element) >= 0) {
+            if (secretNumber.indexOf(element) >= 0) {
                 return 'корова';
             }
             return '';

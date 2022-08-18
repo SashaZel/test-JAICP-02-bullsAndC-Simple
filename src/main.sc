@@ -40,7 +40,7 @@ theme: /
                     // We have to make validation by ourself via inputISvalid()
                     if (inputISvalid($request.query)) {
                         // Set number of attempts to '0'
-                        // This feature make for better UX and gameplay
+                        // This feature made for the better UX and gameplay
                         $session.numberOfAttempts = 0;
                         // random nubmer with $jsapi.random() is not safe
                         // we can get '13' instead '0013' and our script will crush. We have to use custom funct
