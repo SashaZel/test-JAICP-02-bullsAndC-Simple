@@ -1,3 +1,3 @@
 function inputISvalid(userInput) {
-    return true;
+    return false;
 }

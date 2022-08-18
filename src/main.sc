@@ -34,6 +34,7 @@ theme: /
             #    a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
             
     state: Game
+        a: Напиши свою догадку.
         script:
             // random nubmer with $jsapi.random() is not safe
             // we can get '13' instead '0013' and our script will crush
@@ -64,7 +65,6 @@ theme: /
             }
         a: Напиши свою догадку.
             
-            //$reactions.transition("/Check");
         #go!: /Check
         
         
