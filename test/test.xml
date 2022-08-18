@@ -2,5 +2,7 @@
     <test-case id="01_Basic_greeting">
         <q>/start</q>
         <a state="/Start"/>
+        <q>нет</q>
+        <a state="/Start/Agree?/AgreeNo"/>
     </test-case>
 </test>    
