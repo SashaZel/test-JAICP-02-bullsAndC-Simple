@@ -72,7 +72,7 @@ theme: /
             if (result === 'бык бык бык бык') {
                 // Is it possible to add NLG feature for numbers?
                 $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
-                $reactions.answer('Напиши да, если хочешь еще раз сыграть.');
+                $reactions.answer('Напиши "да", если хочешь еще раз сыграть.');
                 // Sould I use graceful finish of session?
                 $jsapi.stopSession();
                 $reactions.transition("/Start/Agree?");
