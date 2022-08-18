@@ -1,3 +1,5 @@
+# Bot created by Alexander Zelenkov lll555@yandex.ru
+
 require: scripts/check.js
 require: scripts/numberGenerator.js
 require: common.js
@@ -21,7 +23,7 @@ theme: /
             state: AgreeNo
                 intent: /Не_согласен
                 script:
-                    // Sould I use gracefull finish of session?
+                    // Sould I use graceful finish of session?
                     //$jsapi.stopSession();
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
@@ -64,7 +66,7 @@ theme: /
             // TODO: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
             // call imported function for checking result from src/scripts/check.js <string>
-            var result = checkNumber($parseTree._UserGuess);
+            var result = checkNumber($parseTree._UserGuess, $session.secretNumber);
             $reactions.answer(result);
             if (result === '   ') {
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Ничего не угадал', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
@@ -82,14 +84,18 @@ theme: /
 
     state: Rules
         intent!: /Правила
-        a: Вот правила игры: Я загадываю число из четырех цифр, например "1234". А ты его должен угадать, то есть написать мне четыре цифры. Если ты написал цифру правильно по месту и значению, то я отвечу "бык". Если какая-то твоя цифра есть в моем секретном числе, то я отвечу "корова". Например, я загадал "1234", а ты мне написал "1243". Я отвечу "бык, бык, корова, корова". Сыграем?
+        a: Вот правила игры: Я загадываю число из четырех цифр, а ты его должен угадать, то есть написать мне четыре цифры. Если ты написал цифру правильно по месту и значению, то я отвечу "бык". Если какая-то твоя цифра есть в моем секретном числе, но место не верно, то я отвечу "корова". Например, я загадал "1234", а ты мне написал "1243". Я отвечу "бык бык корова корова". Сыграем?
+    
+    state: Bot_about
+        intent!: /Бот
+        a: Я бот на платформе JAICP. Кто придумал игру, я не знаю, а написал меня Александр Зеленков https://github.com/SashaZel
         
     # Can I use '\n' end of the line?
     # Is it OK for integration like a telecom bots?
 
     state: NoMatch
         event!: noMatch
-        a: Я не понимаю. "Да" или "Нет?" \n Вы сказали: {{$request.query}}
+        a: Я не понимаю. \n Если будем играть, напиши "Да". \n Если нужны подробные правила, напиши "Правила" \n Если хочешь узнать кто я, напиши "Бот"
 
     state: Match
         event!: match
