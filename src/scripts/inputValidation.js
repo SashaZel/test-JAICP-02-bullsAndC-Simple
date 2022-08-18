@@ -1,6 +1,6 @@
 function inputISvalid(userInput) {
     if (
-        !Number(userInut) || 
+        !Number(userInput) || 
         typeof Number(userInput) !== 'number' || 
         String(userInput).length !== 4
         ) {
