@@ -42,7 +42,7 @@
         <a state="/Start/Agree?/GameStart"/>
         <context var="session">
             {
-                "secretNumber" : ['1', '2', '3', '4'] 
+                "secretNumber" : "['1', '2', '3', '4']" 
             }
         </context>
     </test-case>
