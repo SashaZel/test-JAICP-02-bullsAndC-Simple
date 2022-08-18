@@ -69,6 +69,7 @@ theme: /
         
         
     state: Check
+        # use global intent for expirienced users - they can start the game just after loading (without 'Да-Нет' choise)
         intent!: /Игра
         script: 
             // TODO: line below is a test feature. Remove in production. 
@@ -99,15 +100,16 @@ theme: /
         
     state: Bot_about
         intent!: /Бот
-        a: Я бот на платформе JAICP. Кто придумал игру, я не знаю, а написал меня Александр Зеленков https://github.com/SashaZel
-        
+        a: Я бот на платформе JAICP. Кто придумал игру, я не знаю, а написал меня Александр Зеленков https://github.com/SashaZel \n Будем играть?
+        go: /Start/Agree?
     # Can I use '\n' end of the line?
     # Is it OK for integration like a telecom bots?
 
     state: NoMatch
         event!: noMatch
         a: Я не понимаю. \n Если будем играть, напиши "Да". \n Если нужны подробные правила, напиши "Правила" \n Если хочешь узнать кто я, напиши "Бот"
-
+        go: /Start/Agree?
+        
     state: Match
         event!: match
         a: {{$context.intent.answer}}
