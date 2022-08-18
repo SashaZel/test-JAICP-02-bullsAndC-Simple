@@ -30,50 +30,42 @@ theme: /
             state: GameStart
                 intent: /Начало_игры
                 script:
-                    // random nubmer with $jsapi.random() is not safe
-                    // we can get '13' instead '0013' and our script will crush
-                    // ES6 solution dosen't works...
-                    // even Babel tried to use polyfills for ES5 solution
-                    // $session.secretNumber = [].concat(String(Math.round(Math.random() * 10000)).padStart(4, '0'));
-            
-                    //$session.secretNumber = [0, 0, 0, 0];
-                    //for (var i = 0; i < 4 ; i++) {
-                    //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
-                    //}
-                    //$session.secretNumber = ['1', '2', '3', '4'];
-                    // CAILA @duchling.number handle input wrong! ('0013' recognize like a '13' and mess with input like 'y1234')
-                    // We have to make validation by ourself
-                    $jsapi.startSession();
-                    //$reactions.answer('_var UserGuess {{ $parseTree._UserGuess }}');
+                    // IMPORTANT!: line below is a test feature. Remove in production.
                     $reactions.answer('_User wrote {{ $request.query }}');
-                    // Set number of attempts to '0'
-                    // This feature make for better UX and gameplay
-                    //console.log('Hello console');
-                    // console do not accesseble...
-                     if (inputISvalid($request.query)) {
+            
+                    // Start session by cleaning $session. obj
+                    $jsapi.startSession();
+                    
+                    // CAILA @duchling.number handle input wrong! ('0013' recognize like a '13' and mess with input like 'y1234')
+                    // We have to make validation by ourself via inputISvalid()
+                    if (inputISvalid($request.query)) {
+                        // Set number of attempts to '0'
+                        // This feature make for better UX and gameplay
                         $session.numberOfAttempts = 0;
+                        // random nubmer with $jsapi.random() is not safe
+                        // we can get '13' instead '0013' and our script will crush. We have to use custom funct
                         $session.secretNumber = createNewSecretNumber();
                         $reactions.transition("/Check");
                     } else {
                         $reactions.answer('Требуется четыре цифры');    
                     }
-        #a: Напиши свою догадку.
-            
-        #go!: /Check
-        
         
     state: Check
         # use global intent for expirienced users - they can start the game just after loading (without 'Да-Нет' choise)
         intent!: /Игра
         script: 
-            // TODO: line below is a test feature. Remove in production. 
-            $reactions.answer("_Secret number {{$session.secretNumber}}");
+            // IMPORTANT!: line below is a test feature. Remove in production. 
+            //$reactions.answer("_Secret number {{$session.secretNumber}}");
+            
+            $session.numberOfAttempts += 1;
             // call imported function for checking result from src/scripts/check.js <string>
             var result = checkNumber($request.query, $session.secretNumber);
             $reactions.answer(result);
+            
             if (result === '   ') {
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Ничего не угадал', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
             }
+            
             if (result === 'бык бык бык бык') {
                 // Is it possible to add NLG feature for numbers?
                 $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
@@ -92,6 +84,7 @@ theme: /
         intent!: /Бот
         a: Я бот на платформе JAICP. Кто придумал игру, я не знаю, а написал меня Александр Зеленков https://github.com/SashaZel \n Будем играть?
         go: /Start/Agree?
+        
     # Can I use '\n' end of the line?
     # Is it OK for integration like a telecom bots?
 

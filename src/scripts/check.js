@@ -1,13 +1,13 @@
 function checkNumber(userGuess, secretNumber) {
+    
     if (!userGuess || !secretNumber) {
         return 'Ой, у меня ошибка. Игра не началась. Напиши "Правила", чтобы прочитать правила.'
     }
+    
     if (!inputISvalid(userGuess)) {
         return 'Ошибка ввода. Нужно написать четыре цифры';
     }         
-    // Increment number of attempts
-    $jsapi.context().session.numberOfAttempts += 1;
-    //var arrForFormatting = String(userGuess).split('');
+
     return String(userGuess).split('').map(
         function(element, index) {
             if (element === $jsapi.context().session.secretNumber[index]) {
