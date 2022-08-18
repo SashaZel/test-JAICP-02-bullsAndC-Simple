@@ -17,7 +17,7 @@
         <q>да</q>
         <a state="/Start/Agree?/GameStart"/>
     </test-case>
-    <test-case id="04_Basic_Game_Start_validation">
+    <test-case id="04_Basic_Game_Start_and_error_handling">
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
@@ -26,5 +26,7 @@
         <a state="/Start/Agree?/GameStart"/>
         <q>ьььььФФАААуууу</q>
         <a state="/NoMatch"/>
+        <q>Правил</q>
+        <a state="/Rules"/>
     </test-case>
 </test>    
