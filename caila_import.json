@@ -138,12 +138,7 @@
       "text" : "@duckling.number"
     } ],
     "patterns" : [ ],
-    "slots" : [ {
-      "name" : "UserGuess",
-      "entity" : "duckling.number",
-      "required" : true,
-      "prompts" : [ ]
-    } ],
+    "slots" : [ ],
     "priority" : 0
   } ],
   "entities" : [ ],
