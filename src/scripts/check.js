@@ -1,6 +1,6 @@
 function checkNumber(userGuess, secretNumber) {
     if (!userGuess || !secretNumber) {
-        return 'Ой, у меня ошибка. Игра не началась. Напиши "Да", чтобы поигать, или "Правила", чтобы прочитать правила.'
+        return 'Ой, у меня ошибка. Игра не началась. Напиши "Правила", чтобы прочитать правила.'
     }
     if (!inputISvalid(userGuess)) {
         return 'Ошибка ввода. Нужно написать четыре цифры';
