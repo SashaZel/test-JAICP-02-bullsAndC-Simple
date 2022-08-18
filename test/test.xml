@@ -15,6 +15,6 @@
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
-        <a state="/Start/Agree?/AgreeYes"/>
+        <a state="/Start/Agree?/GameStart"/>
     </test-case>
 </test>    
