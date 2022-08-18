@@ -14,7 +14,7 @@
     <test-case id="03_Basic_greeting_Yes">
         <q>/start</q>
         <a state="/Start"/>
-        <q>нет</q>
+        <q>да</q>
         <a state="/Start/Agree?/AgreeYes"/>
     </test-case>
 </test>    
