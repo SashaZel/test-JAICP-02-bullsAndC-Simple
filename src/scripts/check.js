@@ -1,5 +1,7 @@
 function checkNumber(userGuess, secretNumber) {
-    //var userGuess = $parseTree._UserGuess;
+    if (!userGuess || !secretNumber) {
+        return 'Ой, у меня ошибка... Напиши "Правила" чтобы продолжить.'
+    }
     if (String(userGuess).length !== 4) {
         return 'Нужно написать четыре цифры';
     }         
