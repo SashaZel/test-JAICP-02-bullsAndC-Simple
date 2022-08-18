@@ -28,5 +28,9 @@
         <a state="/NoMatch"/>
         <q>Как играть</q>
         <a state="/Rules"/>
+        <q>Ничего не понял</q>
+        <a state="/NoMatch"/>
+        <q>Как играть</q>
+        <a state="/Rules"/>
     </test-case>
 </test>    
