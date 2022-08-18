@@ -1,5 +1,11 @@
 <test>
-    <test-case id="01_Basic_greeting">
+    <test-case id="01_Basic_No_Match">
+        <q>/start</q>
+        <a state="/Start"/>
+        <q>ффффФФФААА</q>
+        <a state="/NoMatch"/>
+    </test-case>
+    <test-case id="02_Basic_greeting_No">
         <q>/start</q>
         <a state="/Start"/>
         <q>нет</q>
