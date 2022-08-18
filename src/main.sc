@@ -45,7 +45,7 @@ theme: /
             //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
             //}
             //$session.secretNumber = ['1', '2', '3', '4'];
-            //$reactions.answer('The secret number is {{ $session.secretNumber }}');
+            $reactions.answer('var UserGuess {{ $parseTree._UserGuess }}');
             // Set number of attempts to '0'
             // This feature make for better UX and gameplay
             //console.log('Hello console');
