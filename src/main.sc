@@ -53,7 +53,7 @@ theme: /
                         $session.secretNumber = createNewSecretNumber();
                         $reactions.transition("/Check");
                     } else {
-                        $reactions.answer('Hyжно написать четыре цифры');    
+                        $reactions.answer('Требуется четыре цифры');    
                     }
         #a: Напиши свою догадку.
             
