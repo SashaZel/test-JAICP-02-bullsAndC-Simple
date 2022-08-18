@@ -42,15 +42,5 @@
         <a state="/Start/Agree?/GameStart"/>
         <q>1111</q>
         <a state="/Check"/>
-        <!--
-        Can't get access to session variable. Docs doesn't help.
-        <context var="session">
-            {
-                "secretNumber" : [ "1", "2", "3", "4" ]
-            }
-        </context>
-        <q>4444</q>
-        <a>   бык</a>
-        -->
     </test-case>
 </test>    
