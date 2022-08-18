@@ -57,7 +57,6 @@ theme: /
             //console.log('Hello console');
             // console do not accesseble...
             if (inputISvalid($request.query)) {
-                
                 $session.numberOfAttempts = 0;
                 $session.secretNumber = createNewSecretNumber();
                 $reactions.transition("/Check");
@@ -75,7 +74,7 @@ theme: /
             // TODO: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
             // call imported function for checking result from src/scripts/check.js <string>
-            var result = checkNumber($parseTree._UserGuess, $session.secretNumber);
+            var result = checkNumber($request.query, $session.secretNumber);
             $reactions.answer(result);
             if (result === '   ') {
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Ничего не угадал', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
