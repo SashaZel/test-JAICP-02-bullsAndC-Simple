@@ -55,6 +55,7 @@ theme: /
             // console do not accesseble...
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
+            $reactions.answer($session.secretNumber);
             $reactions.transition("/Check");
         
         
@@ -85,6 +86,9 @@ theme: /
     state: Bye
         intent!: /пока
         a: Пока пока
+        
+    # Can I use '\n' end of the line?
+    # Is it OK for integration like a telecom bot?
 
     state: NoMatch
         event!: noMatch
