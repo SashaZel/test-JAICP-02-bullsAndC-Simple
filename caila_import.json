@@ -70,21 +70,6 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11868333,
-    "path" : "/Согласен",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "да"
-    }, {
-      "text" : "Согласен"
-    }, {
-      "text" : "Давай"
-    } ],
-    "patterns" : [ ],
-    "slots" : [ ],
-    "priority" : 0
-  }, {
     "id" : 11890683,
     "path" : "/Бот",
     "enabled" : true,
@@ -109,6 +94,53 @@
       "text" : "Кто придумал"
     } ],
     "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11868333,
+    "path" : "/Согласен",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "да"
+    }, {
+      "text" : "Согласен"
+    }, {
+      "text" : "Давай"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11891220,
+    "path" : "/Начало_игры",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "@duckling.number"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "UserGuess",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ "Напиши число в 4 цифры." ]
+    } ],
+    "priority" : 0
+  }, {
+    "id" : 11891274,
+    "path" : "/Игра",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "@duckling.number"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "UserGuess",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
     "priority" : 0
   } ],
   "entities" : [ ],

@@ -34,7 +34,7 @@ theme: /
             #    a: Я не понял. "Да" или "Нет?" Вы сказали: {{$request.query}}
             
     state: Game
-        a: Напиши свою догадку.
+        intent!: /Начало_игры
         script:
             // random nubmer with $jsapi.random() is not safe
             // we can get '13' instead '0013' and our script will crush
@@ -63,12 +63,13 @@ theme: /
             } else {
                 $reactions.answer('Hyжно написать четыре цифры');    
             }
-        a: Напиши свою догадку.
+        #a: Напиши свою догадку.
             
         #go!: /Check
         
         
     state: Check
+        intent!: /Игра
         script: 
             // TODO: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
