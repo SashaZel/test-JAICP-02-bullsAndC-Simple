@@ -49,6 +49,7 @@ theme: /
             //$session.secretNumber = ['1', '2', '3', '4'];
             // CAILA @duchling.number handle input wrong! ('0013' recognize like a '13', mess with 'y1234')
             // We have to make validation by ourself
+            $jsapi.startSession();
             $reactions.answer('_var UserGuess {{ $parseTree._UserGuess }}');
             $reactions.answer('_User wrote {{ $request.query }}');
             // Set number of attempts to '0'
@@ -56,7 +57,7 @@ theme: /
             //console.log('Hello console');
             // console do not accesseble...
             if (inputISvalid($request.query)) {
-                $jsapi.startSession();
+                
                 $session.numberOfAttempts = 0;
                 $session.secretNumber = createNewSecretNumber();
                 $reactions.transition("/Check");
