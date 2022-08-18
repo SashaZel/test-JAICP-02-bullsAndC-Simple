@@ -15,8 +15,6 @@ theme: /
         go!: /Start/Agree?
         
         state: Agree?
-            script:
-                $jsapi.startSession();
             
             state: AgreeYes
                 intent: /Согласен
@@ -24,8 +22,6 @@ theme: /
                 
             state: AgreeNo
                 intent: /Не_согласен
-                script:
-                    
                 a: Ну ОК. Как будешь готов - напиши "сыграем".
                 
             # Why does the bot state bubbles to the global scope if no match?
@@ -54,6 +50,7 @@ theme: /
             // This feature make for better UX and gameplay
             //console.log('Hello console');
             // console do not accesseble...
+            $jsapi.startSession();
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
             
