@@ -17,12 +17,12 @@
         <q>да</q>
         <a state="/Start/Agree?/GameStart"/>
     </test-case>
-    <test-case id="04_Basic_Game_links">
+    <test-case id="04_Basic_Game_Start_validation">
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
         <a state="/Start/Agree?/GameStart"/>
         <q>1234556</q>
-        <a state="/Check"/>
+        <a state="/Start/Agree?/GameStart"/>
     </test-case>
 </test>    
