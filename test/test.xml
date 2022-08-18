@@ -27,6 +27,6 @@
         <q>ьььььФФАААуууу</q>
         <a state="/NoMatch"/>
         <q>Правила</q>
-        <a state="/Rules"/>
+        <a state="/Start"/>
     </test-case>
 </test>    
