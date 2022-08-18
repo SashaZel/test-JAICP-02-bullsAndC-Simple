@@ -69,7 +69,6 @@ theme: /
         
         
     state: Check
-        intent: /Число
         script: 
             // TODO: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");

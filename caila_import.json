@@ -82,12 +82,7 @@
       "text" : "Давай"
     } ],
     "patterns" : [ ],
-    "slots" : [ {
-      "name" : "UserGuess",
-      "entity" : "duckling.number",
-      "required" : false,
-      "prompts" : [ "Напиши догадку" ]
-    } ],
+    "slots" : [ ],
     "priority" : 0
   }, {
     "id" : 11890683,
@@ -114,22 +109,6 @@
       "text" : "Кто придумал"
     } ],
     "patterns" : [ ],
-    "priority" : 0
-  }, {
-    "id" : 11870894,
-    "path" : "/Число",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "@duckling.number"
-    } ],
-    "patterns" : [ ],
-    "slots" : [ {
-      "name" : "UserGuess",
-      "entity" : "duckling.number",
-      "required" : true,
-      "prompts" : [ ]
-    } ],
     "priority" : 0
   } ],
   "entities" : [ ],
