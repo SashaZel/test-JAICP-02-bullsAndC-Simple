@@ -55,7 +55,7 @@ theme: /
             // console do not accesseble...
             $session.numberOfAttempts = 0;
             $session.secretNumber = createNewSecretNumber();
-            $reactions.answer("Secret number");
+            $reactions.answer("Secret number {{$session.numberOfAttempts}}");
             //$reactions.transition("/Check");
         go!: /Check
         
