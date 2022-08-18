@@ -2,6 +2,7 @@
 
 require: scripts/check.js
 require: scripts/numberGenerator.js
+require: scripts/inputValidation.js
 require: common.js
   module = sys.zb-common
 require: slotfilling/slotFilling.sc
@@ -45,19 +46,26 @@ theme: /
             //    $session.secretNumber[i] = Math.floor(Math.random() * 10);    
             //}
             //$session.secretNumber = ['1', '2', '3', '4'];
-            // CAILA
+            // CAILA @duchling.number handle input wrong! ('0013' recognize like a '13', mess with 'y1234')
+            // We have to make validation by ourself
             $reactions.answer('_var UserGuess {{ $parseTree._UserGuess }}');
             $reactions.answer('_User wrote {{ $request.query }}');
             // Set number of attempts to '0'
             // This feature make for better UX and gameplay
             //console.log('Hello console');
             // console do not accesseble...
-            $jsapi.startSession();
-            $session.numberOfAttempts = 0;
-            $session.secretNumber = createNewSecretNumber();
+            if (inputISvalid($request.query)) {
+                $jsapi.startSession();
+                $session.numberOfAttempts = 0;
+                $session.secretNumber = createNewSecretNumber();
+                $reactions.transition("/Check");
+            } else {
+                $reactions.answer('Hyжно написать четыре цифры');    
+            }
+        a: Напиши свою догадку.
             
             //$reactions.transition("/Check");
-        go!: /Check
+        #go!: /Check
         
         
     state: Check

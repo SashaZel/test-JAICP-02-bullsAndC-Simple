@@ -85,7 +85,7 @@
     "slots" : [ {
       "name" : "UserGuess",
       "entity" : "duckling.number",
-      "required" : true,
+      "required" : false,
       "prompts" : [ "Напиши догадку" ]
     } ],
     "priority" : 0
