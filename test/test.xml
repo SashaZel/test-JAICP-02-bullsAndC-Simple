@@ -54,7 +54,6 @@
         <q>1234</q>
         <a>Победа! Поздравляю. Попытки: 4</a>
         <!--
-        
         Tests with variable are unstable!
         If we run the test first - it OK only for first deployment just after shell reload
         It seems like the shell messed up with global variables (ES5 JS feature) and the same test failed!
