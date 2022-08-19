@@ -40,8 +40,7 @@
         <a state="/Start"/>
         <q>да</q>
         <a state="/Start/Agree?/GameStart"/>
-        <q>1111</q>
-        <a state="/Check"/>
+        
         <!--
         
         Tests with variable are unstable!
@@ -54,6 +53,8 @@
         But for tests it seems in vain.
         Unstable tests...
         
+        <q>1111</q>
+        <a state="/Check"/>
         <context var="session">
             {
                 "secretNumber" : [ "1", "2", "3", "4" ]
