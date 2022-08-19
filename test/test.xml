@@ -49,6 +49,8 @@
         </context>
         <q>4444</q>
         <a>корова корова корова бык</a>
+        <q>1114</q>
+        <a>бык корова корова бык</a>
         <!--
         Can't get access to session variable. Docs doesn't help.
         -->
