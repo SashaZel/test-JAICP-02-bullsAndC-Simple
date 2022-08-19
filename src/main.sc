@@ -36,7 +36,7 @@ theme: /
                     // Start session by cleaning $session. obj
                     $jsapi.startSession();
                     
-                    // CAILA @duchling.number handle input wrong! ('0013' recognize like a '13' and mess with input like 'y1234')
+                    // CAILA @duchling.number handles input wrong! ('0013' recognize like a '13' and mess with input like 'y1234')
                     // We have to make validation by ourself via inputISvalid()
                     if (inputISvalid($request.query)) {
                         // Set number of attempts to '0'
