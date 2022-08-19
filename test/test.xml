@@ -52,7 +52,7 @@
         <q>1114</q>
         <a>бык корова корова бык</a>
         <q>1234</q>
-        <a>Победа! Поздравляю. Попытки: 4</a>
+        <a>бык бык бык бык</a>
         <!--
         Tests with variable are unstable!
         If we run the test first - it OK only for first deployment just after shell reload
