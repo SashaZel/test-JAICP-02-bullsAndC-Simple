@@ -12,7 +12,7 @@ theme: /
     state: Start
         q!: $regex</start>
         intent!: /Сыграем
-        a: Приветствую! Сыграем в "Быки и коровы"? Я загадаю 4-х значное число, а ты попробуешь его угадать. Если нужны подробные правила игры, напиши "Как играть". Если хочешь начать игру заново напиши "Сыграем". Если хочешь узнать кто я, напиши "Бот". Начнем?
+        a: Приветствую! Сыграем в "Быки и коровы"? Я загадаю 4-х значное число (цифры от "0" до "9", все разные), а ты попробуешь его угадать. Если нужны подробные правила игры, напиши "Как играть". Если хочешь начать игру заново напиши "Сыграем". Если хочешь узнать кто я, напиши "Бот". Начнем?
         go!: /Start/Agree?
         
         state: Agree?
@@ -60,19 +60,19 @@ theme: /
             $session.numberOfAttempts += 1;
             // call imported function for checking result from src/scripts/check.js <string>
             var result = checkNumber($request.query, $session.secretNumber);
-            $reactions.answer(result);
+            $reactions.answer('быки {{ result[0] }} коровы{{ result[1]}}');
             
-            if (result === '   ') {
-                $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
-            }
+            # if (result === '   ') {
+            #     $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
+            # }
             
-            if (result === 'бык бык бык бык') {
-                // Is it possible to add NLG feature for numbers?
-                $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
-                $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
-                // Sould I use graceful finish of session?
-                $jsapi.stopSession();
-                $reactions.transition("/Start/Agree?");
+            # if (result === 'бык бык бык бык') {
+            #     // Is it possible to add NLG feature for numbers?
+            #     $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
+            #     $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
+            #     // Sould I use graceful finish of session?
+            #     $jsapi.stopSession();
+            #     $reactions.transition("/Start/Agree?");
             }
 
     state: Rules
