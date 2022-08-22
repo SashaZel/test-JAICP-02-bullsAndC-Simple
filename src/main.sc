@@ -59,9 +59,8 @@ theme: /
             
             $session.numberOfAttempts += 1;
             // call imported function for checking result from src/scripts/check.js <string>
-            //var result = checkNumber($request.query, $session.secretNumber);
-            var result = 'aaa';
-            $reactions.answer('vvv' + result);
+            var result = checkNumber($request.query, $session.secretNumber);
+            $reactions.answer('vvv' + result[0]);
             
             if (result === '   ') {
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));

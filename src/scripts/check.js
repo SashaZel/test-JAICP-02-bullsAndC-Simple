@@ -19,8 +19,6 @@ function checkNumber(userGuess, secretNumber) {
     //         return '';
     //     }
     // ).join(' ');
-    var r = [ 2, 1 ]
-    
-    return r;
+    return [ 3, 5 ];
 
 }
