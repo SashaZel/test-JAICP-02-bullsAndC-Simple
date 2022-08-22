@@ -61,7 +61,7 @@ theme: /
             // call imported function for checking result from src/scripts/check.js <string>
             //var result = checkNumber($request.query, $session.secretNumber);
             var result = [ 3, 5 ];
-            $reactions.answer('быки {{ result[0] }} коровы{{ result[1]}}');
+            $reactions.answer('быки ');
             
             if (result === '   ') {
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
