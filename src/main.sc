@@ -62,17 +62,17 @@ theme: /
             var result = checkNumber($request.query, $session.secretNumber);
             $reactions.answer('быки {{ result[0] }} коровы{{ result[1]}}');
             
-            # if (result === '   ') {
-            #     $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
-            # }
+            if (result === '   ') {
+                $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
+            }
             
-            # if (result === 'бык бык бык бык') {
-            #     // Is it possible to add NLG feature for numbers?
-            #     $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
-            #     $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
-            #     // Sould I use graceful finish of session?
-            #     $jsapi.stopSession();
-            #     $reactions.transition("/Start/Agree?");
+            if (result === 'бык бык бык бык') {
+                // Is it possible to add NLG feature for numbers?
+                $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
+                $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
+                // Sould I use graceful finish of session?
+                $jsapi.stopSession();
+                $reactions.transition("/Start/Agree?");
             }
 
     state: Rules
