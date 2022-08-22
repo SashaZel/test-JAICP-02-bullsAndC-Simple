@@ -60,13 +60,13 @@ theme: /
             $session.numberOfAttempts += 1;
             // call imported function for checking result from src/scripts/check.js <string>
             var result = checkNumber($request.query, $session.secretNumber);
-            $reactions.answer('быков' + result[0] + 'коров' + result[1]);
+            $reactions.answer('быков ' + result[0] + ', коров ' + result[1]);
             
-            if (result === '   ') {
+            if (result === [ 0, 0 ]) {
                 $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
             }
             
-            if (result === 'бык бык бык бык') {
+            if (result === [ 4, 0 ]) {
                 // Is it possible to add NLG feature for numbers?
                 $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                 $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
