@@ -40,6 +40,11 @@
         <a state="/Start"/>
         <q>да</q>
         <a state="/Start/Agree?/GameStart"/>
+        <random>
+            1, 2, 3, 4
+        </random>
+        <q>1234</q>
+        <a>бык бык бык бык</a>
         
         <!--
         

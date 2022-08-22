@@ -55,7 +55,7 @@ theme: /
         intent!: /Игра
         script: 
             // IMPORTANT!: line below is a test feature. Remove in production. 
-            $reactions.answer("_Secret number {{$session.secretNumber}}");
+            //$reactions.answer("_Secret number {{$session.secretNumber}}");
             
             $session.numberOfAttempts += 1;
             // call imported function for checking result from src/scripts/check.js <string>
