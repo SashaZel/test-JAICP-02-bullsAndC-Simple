@@ -4,7 +4,7 @@ function createNewSecretNumber() {
     // return ['1', '2', '3', '4']; 
     return ['', '', '', ''].map(
         function () {
-            return String(Math.floor(Math.random() * 10)); 
+            return String($reactions.random(10)); 
         }    
     );
 }
