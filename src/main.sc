@@ -59,7 +59,8 @@ theme: /
             
             $session.numberOfAttempts += 1;
             // call imported function for checking result from src/scripts/check.js <string>
-            var result = checkNumber($request.query, $session.secretNumber);
+            //var result = checkNumber($request.query, $session.secretNumber);
+            var result = [ 3, 5 ];
             $reactions.answer('быки {{ result[0] }} коровы{{ result[1]}}');
             
             if (result === '   ') {
