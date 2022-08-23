@@ -11,9 +11,9 @@ function createValidSecretNumber () {
 // with check of not repeating returned random value more often than once per every max/2 
 
 function createNewSecretNumber() {
-    var resultNumber;
+    var resultNumber = ['0', '0', '0', '0'];
     
-    while (!inputISValid(resultNumber.join(''))) {
+    while (!inputISvalid(resultNumber.join(''))) {
         resultNumber = createValidSecretNumber();
     }
     
