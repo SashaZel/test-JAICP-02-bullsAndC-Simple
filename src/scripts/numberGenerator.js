@@ -13,7 +13,7 @@ function createValidSecretNumber () {
 function createNewSecretNumber() {
     var resultNumber;
     
-    while (!inputIsValid(resultNumber.join(''))) {
+    while (!inputISValid(resultNumber.join(''))) {
         resultNumber = createValidSecretNumber();
     }
     
