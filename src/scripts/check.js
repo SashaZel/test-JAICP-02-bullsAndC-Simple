@@ -4,9 +4,9 @@ function checkNumber(userGuess, secretNumber) {
     //     return 'Ой, у меня ошибка. Игра не началась. Напиши "Как играть", чтобы прочитать правила.';
     // }
     
-    // if (!inputISvalid(userGuess)) {
-    //     return 'Ошибка ввода. Нужно написать четыре цифры';
-    // }         
+    if (!inputISvalid(userGuess)) {
+        return 'Ошибка ввода. Нужно написать четыре разные цифры';
+    }         
 
     // return String(userGuess).split('').map(
     //     function(element, index) {
