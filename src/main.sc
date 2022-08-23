@@ -31,9 +31,6 @@ theme: /
             state: GameStart
                 intent: /Начало_игры
                 script:
-                    // IMPORTANT!:  line below is a test feature. Remove in production.
-                    //$reactions.answer('_User wrote {{ $request.query }}');
-            
                     $jsapi.startSession();
                     
                     if (inputISvalid($request.query)) {
@@ -48,7 +45,7 @@ theme: /
         intent!: /Игра
         script: 
             // IMPORTANT!: line below is a test feature. Remove in production. 
-            $reactions.answer("_Secret number {{$session.secretNumber}}");
+            //$reactions.answer("_Secret number {{$session.secretNumber}}");
             
             $session.numberOfAttempts += 1;
             
