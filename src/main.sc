@@ -91,7 +91,7 @@ theme: /
     state: NoMatch
         event!: noMatch
         a: Я не понимаю. \n Если хочешь новую игру, напиши "Сыграем". \n Если нужны подробные правила, напиши "Как играть" \n Если хочешь узнать кто я, напиши "Бот"
-        go: /Start
+        go: /Start/Agree?
         
     state: Match
         event!: match
