@@ -10,7 +10,7 @@
         <a state="/Start"/>
         <random>0</random>
         <q>нет</q>
-        <a state="/Start/Agree/AgreeNo">Ну ОК. Как будешь готов - напиши "Сыграем".</a>
+        <a state="/Start/Agree/AgreeNo">Ну ОК. Как будешь готов - напиши: "Сыграем".</a>
     </test-case>
     <test-case id="03_Basic_greeting_Yes">
         <q>/start</q>
@@ -26,9 +26,9 @@
         <q>1234556</q>
         <a state="/Start/Agree/GameStart">Требуются четыре разные цифры.</a>
         <q>ьььььФФАААуууу</q>
-        <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши "Сыграем".</a>
+        <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши: "Сыграем".</a>
         <q>рррррррррррр</q>
-        <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши "Сыграем".</a>
+        <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши: "Сыграем".</a>
         <q>сыграем</q>
         <a state="/Start"/>
     </test-case>
@@ -52,6 +52,6 @@
         <a state="/Check">Победа! Число угадано за 4 хода. Напиши "Да", если хочешь еще раз сыграть.</a>
         <random>1</random>
         <q>найн</q>
-        <a state="/Start/Agree/AgreeNo">Хорошо. Как захочешь, напиши "Пуск".</a>
+        <a state="/Start/Agree/AgreeNo">Хорошо. Как захочешь, напиши: "Пуск".</a>
     </test-case>
 </test>    
