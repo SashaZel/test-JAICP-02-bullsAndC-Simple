@@ -47,25 +47,25 @@ theme: /
             // IMPORTANT!: line below is a test feature. Remove in production. 
             //$reactions.answer("_Secret number {{$session.secretNumber}}");
             
-            # $session.numberOfAttempts += 1;
+            $session.numberOfAttempts += 1;
             
-            # if (inputISvalid($request.query)) {
+            if (inputISvalid($request.query)) {
                 
-            #     var result = checkNumber($request.query, $session.secretNumber);
-            #     $reactions.answer(result[0] + ' бык' + bullsCowsWordsEndDict[result[0]][0] + ' / ' + result[1] + ' коров' + bullsCowsWordsEndDict[result[1]][1]);
+                var result = checkNumber($request.query, $session.secretNumber);
+                $reactions.answer(result[0] + ' бык' + bullsCowsWordsEndDict[result[0]][0] + ' / ' + result[1] + ' коров' + bullsCowsWordsEndDict[result[1]][1]);
             
-            #     if (result[0] === 0 && result[1] === 0) {
-            #         $reactions.answer('Попробуй еще. Пока совпадений нет.');
-            #     }
+                if (result[0] === 0 && result[1] === 0) {
+                    $reactions.answer('Попробуй еще. Пока совпадений нет.');
+                }
             
-            #     if (result[0] === 4) {
-            #         $reactions.answer('Победа! Число угаданно за ' + $session.numberOfAttempts + numberOfTurnsName($session.numberOfAttempts) + '. Напиши "Да", если хочешь еще раз сыграть.');
-            #         $jsapi.stopSession();
-            #         $reactions.transition("/Start/Agree");
-            #   }
-            # } else {
-            #     $reactions.answer('Требуются четыре разные цифры'); 
-            # }
+                if (result[0] === 4) {
+                    $reactions.answer('Победа! Число угаданно за ' + $session.numberOfAttempts + numberOfTurnsName($session.numberOfAttempts) + '. Напиши "Да", если хочешь еще раз сыграть.');
+                    $jsapi.stopSession();
+                    $reactions.transition("/Start/Agree");
+              }
+            } else {
+                $reactions.answer('Требуются четыре разные цифры'); 
+            }
 
     state: NoMatch
         event!: noMatch
