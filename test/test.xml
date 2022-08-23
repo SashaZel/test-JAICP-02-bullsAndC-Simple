@@ -43,14 +43,15 @@
         <random>
             1, 2, 3, 4
         </random>
-        <q>1111</q>
-        <a>бык корова корова корова</a>
+        <q>1567</q>
+        <a>1 бык / 0 коров</a>
+        <!--
         <q>1234</q>
         <a>бык бык бык бык</a>
         <a>Победа! Поздравляю. Попытки: 2</a>
         <a>Напиши "Да", если хочешь еще раз сыграть.</a>
         
-        <!--
+        
         
         Tests with variable are unstable!
         If we run the test first - it OK only for first deployment just after shell reload
