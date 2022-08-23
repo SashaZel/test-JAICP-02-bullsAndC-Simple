@@ -8,8 +8,9 @@
     <test-case id="02_Basic_greeting_No">
         <q>/start</q>
         <a state="/Start"/>
+        <random>0</random>
         <q>нет</q>
-        <a state="/Start/Agree/AgreeNo"/>
+        <a state="/Start/Agree/AgreeNo">Ну ОК. Как будешь готов - напиши "Сыграем".</a>
     </test-case>
     <test-case id="03_Basic_greeting_Yes">
         <q>/start</q>
