@@ -26,8 +26,10 @@
         <a state="/Start/Agree?/GameStart"/>
         <q>ьььььФФАААуууу</q>
         <a state="/NoMatch"/>
+        <a state="/Start/Agree?"/>
         <q>Как играть</q>
         <a state="/NoMatch"/>
+        <a state="/Start/Agree?"/>
         <!--
         <q>Ничего не понял</q>
         <a state="/NoMatch"/>
