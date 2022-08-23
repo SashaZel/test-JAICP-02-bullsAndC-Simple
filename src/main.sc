@@ -18,6 +18,8 @@ theme: /
         
         state: Agree?
             
+            # need to strict rout to да.нет without global scope
+            
             state: AgreeYes
                 intent: /Согласен
                 go!: ../GameStart
