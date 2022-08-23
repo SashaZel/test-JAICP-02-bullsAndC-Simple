@@ -47,7 +47,7 @@ theme: /
                         $session.secretNumber = createNewSecretNumber();
                         $reactions.transition("/Check");
                     } else {
-                        $reactions.answer('Требуется четыре цифры');    
+                        $reactions.answer('Требуются четыре разные цифры');    
                     }
         
     state: Check
