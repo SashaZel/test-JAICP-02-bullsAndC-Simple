@@ -68,7 +68,7 @@ theme: /
                 
             
                 var result = checkNumber($request.query, $session.secretNumber);
-                $reactions.answer(result[0] + 'бык' + worldEndDict[result[0]][0] + ' / ' + result[1] + 'коров' + worldEndDict[result[1]][1]);
+                $reactions.answer(result[0] + 'бык' + worldEndDict[result[0]][0] + ' / ' + result[1] + ' коров' + worldEndDict[result[1]][1]);
             
                 if (result[0] === 0 && result[1] === 0) {
                     $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
