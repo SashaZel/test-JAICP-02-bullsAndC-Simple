@@ -72,6 +72,6 @@ theme: /
         a: Я не понимаю. Если хочешь новую игру, напиши: "Сыграем".
         go!: /Start/Agree
         
-    state: Match
-        event!: match
-        a: {{$context.intent.answer}}
+    # state: Match
+    #     event!: match
+    #     a: {{$context.intent.answer}}
