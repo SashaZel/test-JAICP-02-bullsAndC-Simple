@@ -30,29 +30,8 @@
         <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши "Сыграем".</a>
         <q>сыграем</q>
         <a state="/Start"/>
-        <!--
-        <a state="/Start/Agree"/>
-        
-        <a class="/Start/Agree?/GameStart"/>
-        
-        
-        
-        
-        
-        <a>FFFFFFFFFFЯ не понимаю. Если хочешь новую игру, напиши "Сыграем".</a>
-        <q>Как играть</q>
-        <a state="/NoMatch"/>
-        <a state="/Start/Agree?"/>
-        
-        <q>Ничего не понял</q>
-        <a state="/NoMatch"/>
-        <q>Как играть</q>
-        <a state="/NoMatch"/>
-        <q>найн</q>
-        <a state="/Start/Agree?/AgreeNo"/>
-        -->
     </test-case>
-    <test-case id="05_Basic_Game_Tree">
+    <test-case id="05_Basic_Game_Flow">
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
@@ -61,7 +40,8 @@
             1, 2, 3, 4
         </random>
         <q>1567</q>
-        <a>1 бык / 0 коров</a>
+        <a state="/Check">1 бык / 0 коров</a>
+        
         <!--
         <q>1234</q>
         <a>бык бык бык бык</a>
