@@ -73,6 +73,7 @@ theme: /
             } else {
                 $reactions.answer('Требуются четыре разные цифры'); 
             }
+        a: Играем.
 
     state: Rules
         intent!: /Правила
