@@ -55,7 +55,7 @@ theme: /
                 $reactions.answer(result[0] + ' бык' + bullsCowsWordsEndDict[result[0]][0] + ' / ' + result[1] + ' коров' + bullsCowsWordsEndDict[result[1]][1]);
             
                 if (result[0] === 0 && result[1] === 0) {
-                    $reactions.answer('Попробуй еще. Пока совпадений нет.');
+                    //$reactions.answer('Попробуй еще. Пока совпадений нет.');
                 }
             
                 if (result[0] === 4) {
