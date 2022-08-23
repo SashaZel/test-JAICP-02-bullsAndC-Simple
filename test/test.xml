@@ -42,6 +42,8 @@
         </random>
         <q>1567</q>
         <a state="/Check">1 бык / 0 коров</a>
+        <q>7890</q>
+        <a state="/Check"/>
         <q>1247</q>
         <a state="/Check">2 быка / 1 корова</a>
         <q>1234</q>
@@ -50,36 +52,5 @@
         <random>1</random>
         <q>найн</q>
         <a state="/Start/Agree/AgreeNo">Хорошо. Как захочешь, напиши "Пуск".</a>
-        
-        <!--
-        <q>1234</q>
-        <a>бык бык бык бык</a>
-        <a>Победа! Поздравляю. Попытки: 2</a>
-        <a>Напиши "Да", если хочешь еще раз сыграть.</a>
-        
-        
-        
-        Tests with variable are unstable!
-        If we run the test first - it OK only for first deployment just after shell reload
-        It seems like the shell messed up with global variables (ES5 JS feature) and the same test failed!
-        Sometimes tests are OK if we run test env in 'Run test in the background' mode. 
-        Seems that test build of bot also clean up global variables from previous sessions and it sometimes works.
-        Note! I used $jsapi.startSession() and $jsapi.stopSession() for clean up global var scope 
-        But for tests it seems in vain.
-        Unstable tests...
-        
-        <q>1111</q>
-        <a state="/Check"/>
-        <context var="session">
-            {
-                "secretNumber" : [ "1", "2", "3", "4" ]
-            }
-        </context>
-        <q>4444</q>
-        <a>корова корова корова бык</a>
-        <q>1114</q>
-        <a>бык корова корова бык</a>
-        
-        -->
     </test-case>
 </test>    
