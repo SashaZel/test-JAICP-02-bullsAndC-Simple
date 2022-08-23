@@ -46,8 +46,9 @@
         <q>1234</q>
         <a state="/Check">4 быка / 0 коров</a>
         <a state="/Check">Победа! Число угаданно за 3 хода. Напиши "Да", если хочешь еще раз сыграть.</a>
+        <random>1</random>
         <q>найн</q>
-        <a state="/Start/Agree/AgreeNo"/>
+        <a state="/Start/Agree/AgreeNo">Хорошо. Как захочешь, напиши "Пуск".</a>
         
         <!--
         <q>1234</q>
