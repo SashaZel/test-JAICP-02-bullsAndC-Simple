@@ -13,7 +13,7 @@ function inputISvalid(userInput) {
     for (var i = 0; i < 4; i++) {
         if (userInput.split('').filter(
                 function (element) { return element === userInput[i] }
-            ) !== 1 ) {
+            ).length !== 1 ) {
             return false;    
         }
     }
