@@ -9,21 +9,21 @@
         <q>/start</q>
         <a state="/Start"/>
         <q>нет</q>
-        <a state="/Start/Agree?/AgreeNo"/>
+        <a state="/Start/Agree/AgreeNo"/>
     </test-case>
     <test-case id="03_Basic_greeting_Yes">
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
-        <a state="/Start/Agree?/GameStart"/>
+        <a state="/Start/Agree/GameStart"/>
     </test-case>
     <test-case id="04_Basic_Game_Start_and_error_handling">
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
-        <a state="/Start/Agree?/GameStart"/>
+        <a state="/Start/Agree/GameStart"/>
         <q>1234556</q>
-        <a state="/Start/Agree?/GameStart"/>
+        <a state="/Start/Agree/GameStart"/>
         <q>ьььььФФАААуууу</q>
         <a state="/NoMatch"/>
         
@@ -51,7 +51,7 @@
         <q>/start</q>
         <a state="/Start"/>
         <q>да</q>
-        <a state="/Start/Agree?/GameStart"/>
+        <a state="/Start/Agree/GameStart"/>
         <random>
             1, 2, 3, 4
         </random>
