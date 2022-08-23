@@ -54,4 +54,13 @@
         <q>найн</q>
         <a state="/Start/Agree/AgreeNo">Хорошо. Как захочешь, напиши: "Пуск".</a>
     </test-case>
+    <test-case id="06_Basic_Fast_Start">
+        <q>/start</q>
+        <a state="/Start"/>
+        <random>
+            5, 6, 7, 8
+        </random>
+        <q>5087</q>
+        <a state="/Check">1 бык / 2 коровы</a>
+    </test-case>
 </test>    
