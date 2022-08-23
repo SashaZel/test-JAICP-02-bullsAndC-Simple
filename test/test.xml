@@ -44,6 +44,7 @@
         <a state="/Check">1 бык / 0 коров</a>
         <q>7890</q>
         <a state="/Check"/>
+        <a state="/Check"/>
         <q>1247</q>
         <a state="/Check">2 быка / 1 корова</a>
         <q>1234</q>
