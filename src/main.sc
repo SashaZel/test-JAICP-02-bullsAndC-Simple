@@ -64,11 +64,11 @@ theme: /
                 var result = checkNumber($request.query, $session.secretNumber);
                 $reactions.answer('быков ' + result[0] + ', коров ' + result[1]);
             
-                if (result === [ 0, 0 ]) {
+                if (result[0] === 0 && result[1] === 0) {
                     $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
                 }
             
-                if (result === [ 4, 0 ]) {
+                if (result[0] === 4) {
                     $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                     $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
                     $jsapi.stopSession();
