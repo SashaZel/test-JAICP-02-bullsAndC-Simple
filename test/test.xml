@@ -25,7 +25,8 @@
         <q>1234556</q>
         <a state="/Start/Agree?/GameStart"/>
         <q>ьььььФФАААуууу</q>
-        <a class="/NoMatch"/>
+        <a class="/Start/Agree?/GameStart"/>
+        <a state="/NoMatch"/>
         <a state="/Start/Agree?"/>
         <!--
         
