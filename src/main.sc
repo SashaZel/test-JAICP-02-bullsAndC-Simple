@@ -45,7 +45,7 @@ theme: /
         intent!: /Игра
         script: 
             // IMPORTANT!: line below is a test feature. Remove in production. 
-            //$reactions.answer("_Secret number {{$session.secretNumber}}");
+            $reactions.answer("_Secret number {{$session.secretNumber}}");
             
             $session.numberOfAttempts += 1;
             
@@ -59,7 +59,7 @@ theme: /
                 }
             
                 if (result[0] === 4) {
-                    $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
+                    $reactions.answer('Победа! Число угаданно за ' + $session.numberOfAttempts + numberOfTurnsName($session.numberOfAttempts));
                     $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
                     $jsapi.stopSession();
                     $reactions.transition("/Start/Agree");
