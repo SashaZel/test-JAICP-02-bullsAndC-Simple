@@ -31,6 +31,6 @@ function checkNumber(userGuess, secretNumber) {
         }
     }
     
-    return [ 3, 5 ];
+    return [ bulls, cows ];
 
 }
