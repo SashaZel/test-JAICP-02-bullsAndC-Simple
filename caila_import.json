@@ -32,62 +32,6 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11890362,
-    "path" : "/Правила",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "правила"
-    }, {
-      "text" : "условия"
-    }, {
-      "text" : "инструкция"
-    }, {
-      "text" : "мануал"
-    }, {
-      "text" : "руководство"
-    }, {
-      "text" : "man"
-    }, {
-      "text" : "help"
-    }, {
-      "text" : "как играть"
-    }, {
-      "text" : "что писать"
-    }, {
-      "text" : "куда нажимать"
-    }, {
-      "text" : "помощь"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
-    "id" : 11890683,
-    "path" : "/Бот",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "бот"
-    }, {
-      "text" : "Бот"
-    }, {
-      "text" : "Кто ты"
-    }, {
-      "text" : "Кто ты?"
-    }, {
-      "text" : "About"
-    }, {
-      "text" : "about"
-    }, {
-      "text" : "Про бота"
-    }, {
-      "text" : "О себе"
-    }, {
-      "text" : "Кто придумал"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
     "id" : 11868333,
     "path" : "/Согласен",
     "enabled" : true,

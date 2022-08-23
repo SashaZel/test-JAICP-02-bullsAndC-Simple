@@ -6,9 +6,9 @@ function createValidSecretNumber () {
     );
 }
 
-// validation of secret number
-// in fact this feature is redundant cause docs specified $reactions.random(max) as a method
-// with check of not repeating returned random value more often than once per every max/2 
+// Validation of secret number.
+// In fact this feature is redundant cause docs specified $reactions.random(max) as a method
+// which returns uniqe number for less than max/2 attempt 
 
 function createNewSecretNumber() {
     var resultNumber = ['0', '0', '0', '0'];
@@ -19,4 +19,3 @@ function createNewSecretNumber() {
     
     return resultNumber;
 }
-

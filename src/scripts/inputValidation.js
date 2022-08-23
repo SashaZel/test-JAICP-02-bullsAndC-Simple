@@ -1,7 +1,4 @@
 function inputISvalid(userInput) {
-    // if (userInput === '0000') {
-    //     return true;
-    // }
     
     if (
         !Number(userInput) || 
