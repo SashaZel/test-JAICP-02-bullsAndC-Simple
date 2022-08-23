@@ -42,7 +42,6 @@
         </random>
         <q>1543</q>
         <a state="/Check">1 бык / 2 коровы</a>
-        <random>2</random>
         <q>7890</q>
         <a state="/Check">0 быков / 0 коров</a> 
         <a state="/Check">Попробуй еще. Пока совпадений нет.</a>
