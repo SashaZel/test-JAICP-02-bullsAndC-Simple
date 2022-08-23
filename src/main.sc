@@ -64,7 +64,7 @@ theme: /
                     $reactions.transition("/Start/Agree");
               }
             } else {
-                $reactions.answer('Требуются четыре разные цифры'); 
+                $reactions.answer('Требуются четыре разные цифры.'); 
             }
 
     state: NoMatch
