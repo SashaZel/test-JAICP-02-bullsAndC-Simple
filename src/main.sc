@@ -54,6 +54,12 @@ theme: /
         # use global intent for expirienced users - they can start the game just after loading (without 'Да-Нет' choise)
         intent!: /Игра
         script: 
+            var worldEndDict = [
+                [ 'ов', '' ],
+                [ '', 'а' ],
+                [ 'а', 'ы' ],
+                [ 'а', 'ы' ]
+            ];
             // IMPORTANT!: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
             $session.numberOfAttempts += 1;
@@ -62,7 +68,7 @@ theme: /
                 
             
                 var result = checkNumber($request.query, $session.secretNumber);
-                $reactions.answer('быков ' + result[0] + ', коров ' + result[1]);
+                $reactions.answer(result[0] + 'бык' + worldEndDict[result[0]][0] + ' / ' + result[1] + 'коров' + worldEndDict[result[1]][1]);
             
                 if (result[0] === 0 && result[1] === 0) {
                     $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
