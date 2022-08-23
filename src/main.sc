@@ -59,8 +59,7 @@ theme: /
                 }
             
                 if (result[0] === 4) {
-                    $reactions.answer('Победа! Число угаданно за ' + $session.numberOfAttempts + numberOfTurnsName($session.numberOfAttempts));
-                    $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
+                    $reactions.answer('Победа!\n Число угаданно за ' + $session.numberOfAttempts + numberOfTurnsName($session.numberOfAttempts) + '.\nНапиши "Да", если хочешь еще раз сыграть.');
                     $jsapi.stopSession();
                     $reactions.transition("/Start/Agree");
                }
