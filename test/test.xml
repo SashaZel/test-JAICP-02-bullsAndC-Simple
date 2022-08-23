@@ -26,6 +26,7 @@
         <a state="/Start/Agree/GameStart"/>
         <q>ьььььФФАААуууу</q>
         <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши "Сыграем".</a>
+        <a></a>
         <a state="/Start/Agree"/>
         <!--
         
