@@ -56,23 +56,26 @@ theme: /
         script: 
             // IMPORTANT!: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
-            
             $session.numberOfAttempts += 1;
-            // call imported function for checking result from src/scripts/check.js <string>
-            var result = checkNumber($request.query, $session.secretNumber);
-            $reactions.answer('быков ' + result[0] + ', коров ' + result[1]);
             
-            if (result === [ 0, 0 ]) {
-                $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
+            if (inputISvalid($request.query)) {
+                
+            
+                var result = checkNumber($request.query, $session.secretNumber);
+                $reactions.answer('быков ' + result[0] + ', коров ' + result[1]);
+            
+                if (result === [ 0, 0 ]) {
+                    $reactions.answer(selectRandomArg(['Что-то совсем пусто. Нет правильных цифр', 'Гм. Нет. Пока мимо.', 'Попробуй еще, пока нет совпадений']));
+                }
+            
+                if (result === [ 4, 0 ]) {
+                    $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
+                    $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
+                    $jsapi.stopSession();
+                    $reactions.transition("/Start/Agree?");
             }
-            
-            if (result === [ 4, 0 ]) {
-                // Is it possible to add NLG feature for numbers?
-                $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
-                $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
-                // Sould I use graceful finish of session?
-                $jsapi.stopSession();
-                $reactions.transition("/Start/Agree?");
+            } else {
+                $reactions.answer('Требуются четыре разные цифры'); 
             }
 
     state: Rules
