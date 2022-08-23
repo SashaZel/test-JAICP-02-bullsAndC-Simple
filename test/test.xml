@@ -23,7 +23,7 @@
         <q>да</q>
         <a state="/Start/Agree/GameStart"/>
         <q>1234556</q>
-        <a state="/Start/Agree/GameStart"/>
+        <a state="/Start/Agree/GameStart">Требуются четыре разные цифры.</a>
         <q>ьььььФФАААуууу</q>
         <a state="/NoMatch">Я не понимаю. Если хочешь новую игру, напиши "Сыграем".</a>
         <q>рррррррррррр</q>
