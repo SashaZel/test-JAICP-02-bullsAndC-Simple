@@ -71,7 +71,7 @@ theme: /
     state: NoMatch
         event!: noMatch
         a: Я не понимаю. \n Если хочешь новую игру, напиши "Сыграем".
-        go: /Start/Agree?
+        go!: /Start/Agree?
         
     state: Match
         event!: match
