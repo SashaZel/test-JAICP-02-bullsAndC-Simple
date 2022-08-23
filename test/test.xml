@@ -25,12 +25,13 @@
         <q>1234556</q>
         <a state="/Start/Agree?/GameStart"/>
         <q>ьььььФФАААуууу</q>
-        <a state="/NoMatch"/>
+        <a state="/NoMatch">Я не понимаю. \n Если хочешь новую игру, напиши "Сыграем".</a>
         <a state="/Start/Agree?"/>
+        <!--
         <q>Как играть</q>
         <a state="/NoMatch"/>
         <a state="/Start/Agree?"/>
-        <!--
+        
         <q>Ничего не понял</q>
         <a state="/NoMatch"/>
         <q>Как играть</q>
