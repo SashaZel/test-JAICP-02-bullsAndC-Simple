@@ -22,6 +22,7 @@ theme: /
             
             state: AgreeYes
                 intent: /Согласен
+                a: Играем!
                 go!: ../GameStart
                 
             state: AgreeNo
