@@ -58,7 +58,8 @@ theme: /
                 [ 'ов', '' ],
                 [ '', 'а' ],
                 [ 'а', 'ы' ],
-                [ 'а', 'ы' ]
+                [ 'а', 'ы' ],
+                [ 'а', 'ы' ],
             ];
             // IMPORTANT!: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
