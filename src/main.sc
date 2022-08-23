@@ -62,7 +62,7 @@ theme: /
                     $reactions.answer('Победа! Поздравляю. Попытки: {{ $session.numberOfAttempts }}');
                     $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
                     $jsapi.stopSession();
-                    $reactions.transition("/Start/Agree?");
+                    $reactions.transition("/Start/Agree");
                }
             } else {
                 $reactions.answer('Требуются четыре разные цифры'); 
