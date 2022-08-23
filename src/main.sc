@@ -34,17 +34,10 @@ theme: /
                     // IMPORTANT!:  line below is a test feature. Remove in production.
                     //$reactions.answer('_User wrote {{ $request.query }}');
             
-                    // Start session by cleaning $session. obj
                     $jsapi.startSession();
                     
-                    // CAILA @duchling.number handles input wrong! ('0013' recognize like a '13' and mess with input like 'y1234')
-                    // We have to make validation by ourself via inputISvalid()
                     if (inputISvalid($request.query)) {
-                        // Set number of attempts to '0'
-                        // This feature made for the better UX and gameplay
                         $session.numberOfAttempts = 0;
-                        // random nubmer with $jsapi.random() is not safe
-                        // we can get '13' instead '0013' and our script will crush. We have to use custom funct
                         $session.secretNumber = createNewSecretNumber();
                         $reactions.transition("/Check");
                     } else {
@@ -52,17 +45,15 @@ theme: /
                     }
         
     state: Check
-        # use global intent for expirienced users - they can start the game just after loading (without 'Да-Нет' choise)
         intent!: /Игра
         script: 
-            
             // IMPORTANT!: line below is a test feature. Remove in production. 
             $reactions.answer("_Secret number {{$session.secretNumber}}");
+            
             $session.numberOfAttempts += 1;
             
             if (inputISvalid($request.query)) {
                 
-            
                 var result = checkNumber($request.query, $session.secretNumber);
                 $reactions.answer(result[0] + ' бык' + bullsCowsWordsEndDict[result[0]][0] + ' / ' + result[1] + ' коров' + bullsCowsWordsEndDict[result[1]][1]);
             
@@ -75,7 +66,7 @@ theme: /
                     $reactions.answer('Напиши "Да", если хочешь еще раз сыграть.');
                     $jsapi.stopSession();
                     $reactions.transition("/Start/Agree?");
-            }
+               }
             } else {
                 $reactions.answer('Требуются четыре разные цифры'); 
             }
